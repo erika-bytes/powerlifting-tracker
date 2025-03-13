@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powerlifting Stats Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Powerlifting Stats Comparison</h1>
+        <div class="comparison-container">
+            <div class="athlete-column">
+                <div class="input-group">
+                    <h2>Athlete 1</h2>
+                    <div class="input-field">
+                        <label for="athleteName1">Athlete Name</label>
+                        <input type="text" id="athleteName1" placeholder="Enter athlete name" />
+                    </div>
+                    <div class="input-field">
+                        <label for="rankingDate1">Year</label>
+                        <input type="text" id="rankingDate1" />
+                    </div>
+                    <div class="input-field">
+                        <label for="rankingEquipment1">Equipment</label>
+                        <select id="rankingEquipment1">
+                            <option value="">Select Equipment</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="rankingFederation1">Federation</label>
+                        <select id="rankingFederation1">
+                            <option value="">Select Federation</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="rankingDivision1">Division</label>
+                        <select id="rankingDivision1">
+                            <option value="">Select Division</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="rankingWeightClass1">Weight Class</label>
+                        <select id="rankingWeightClass1">
+                            <option value="">Select Weight Class</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="charts-group">
+                    <div class="chart-container">
+                        <canvas id="statsChart1"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="bodyweightChart1"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="dotsChart1"></canvas>
+                    </div>
+                </div>
+                <div class="ranked-list-container">
+                    <h3>Ranking</h3>
+                    <ul id="rankedList1"></ul>
+                </div>
+            </div>
+
+            <div class="athlete-column">
+                <div class="input-group">
+                    <h2>Athlete 2</h2>
+                    <div class="input-field">
+                        <label for="athleteName2">Athlete Name</label>
+                        <input type="text" id="athleteName2" placeholder="Enter athlete name" />
+                    </div>
+                    <div class="input-field">
+                        <label for="rankingDate2">Year</label>
+                        <input type="text" id="rankingDate2" />
+                    </div>
+                    <div class="input-field">
+                        <label for="rankingEquipment2">Equipment</label>
+                        <select id="rankingEquipment2">
+                            <option value="">Select Equipment</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="rankingFederation2">Federation</label>
+                        <select id="rankingFederation2">
+                            <option value="">Select Federation</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="rankingDivision2">Division</label>
+                        <select id="rankingDivision2">
+                            <option value="">Select Division</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="rankingWeightClass2">Weight Class</label>
+                        <select id="rankingWeightClass2">
+                            <option value="">Select Weight Class</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="charts-group">
+                    <div class="chart-container">
+                        <canvas id="statsChart2"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="bodyweightChart2"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="dotsChart2"></canvas>
+                    </div>
+                </div>
+                <div class="ranked-list-container">
+                    <h3>Ranking</h3>
+                    <ul id="rankedList2"></ul>
+                </div>
+            </div>
+        </div>
+        <button id="compareAthletes">Compare Athletes</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
